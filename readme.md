@@ -1,5 +1,7 @@
 #Dreamforce Session (Chatter)
 
+This library wraps the Chatter REST APi in objective-c. It also provides a subclass of NSMutableDictionary to keep the key / value pairs ordered, as Chatter is sensitive to parameter order. 
+
 ## Variables
 Name  | Value 
 ------------- | ------------- 
