@@ -1,12 +1,12 @@
 #Dreamforce Session (Chatter)
 
-This library wraps the Chatter REST APi in objective-c. It also provides a subclass of NSMutableDictionary to keep the key / value pairs ordered, as Chatter is sensitive to parameter order. 
+This library wraps the Chatter REST APi in objective-c. It also provides a subclass of NSMutableDictionary to keep the key / value pairs ordered, as Chatter is sensitive to parameter order. The slides from the session are located on speakerdeck (<https://speakerdeck.com/u/kyleroche/p/dreamforce-2012-presentation>)
 
 ## Variables
 Name  | Value 
 ------------- | ------------- 
-Manager User Record (Todd)    | @"00560000001j3pV" 
-5 Star club Group 	| @"0F96000000006On"
+Manager User Record (Todd)    | @"" 
+5 Star club Group 	| @""
 Inbound Placeholder	| DREAMFORCE INBOUND
 Seven button			| DREAMFORCE SEVEN
 
@@ -129,7 +129,7 @@ Add plain text with hashtag and mention
 
 Add the call to Targeted method
 ```
-[helper postFeedItemText:@" Inbound Call" Target:[[_appManager.currentCallInfo objectForKey:@"sfContactInfo"] stringForKey:@"Id"] Mention:@"00560000001j3pV" Hashtag:@"inbound" Response:^(id JSON) {
+[helper postFeedItemText:@" Inbound Call" Target:[[_appManager.currentCallInfo objectForKey:@"sfContactInfo"] stringForKey:@"Id"] Mention:@"" Hashtag:@"inbound" Response:^(id JSON) {
         NSLog(@"inbound chatter posted");
     } Failure:^{
         NSLog(@"inbound chatter failed");
@@ -138,7 +138,7 @@ Add the call to Targeted method
 
 Add the call to 5 star club group
 ```
-[helper postFeedItemText:@" Hello World Mention+Hashtag " Target:@"0F96000000006On" Mention:[_appManager.userInformation objectForKey:@"sfUserId"] Hashtag:@"important" Response:^(id JSON) {
+[helper postFeedItemText:@" Hello World Mention+Hashtag " Target:@"" Mention:[_appManager.userInformation objectForKey:@"sfUserId"] Hashtag:@"important" Response:^(id JSON) {
         NSLog(@"success mention+hashtag");
     } Failure:^(){
         NSLog(@"fail mention+hashtag");
